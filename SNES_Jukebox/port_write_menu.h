@@ -6,10 +6,10 @@
 #include "lcd_draw.h"
 #include "snes_controller.h"
 
-static PROGMEM prog_uchar READS_Y[] = { 50 };
-static PROGMEM prog_uchar WRITES_Y[] = { 110 };
-static PROGMEM prog_uint16_t INITIAL_REPEAT_DELAY[] = { 500 };
-static PROGMEM prog_uint16_t REPEAT_DELAY[] = { 150 };
+static PROGMEM const unsigned char READS_Y[] = { 50 };
+static PROGMEM const unsigned char WRITES_Y[] = { 110 };
+static PROGMEM const unsigned short INITIAL_REPEAT_DELAY[] = { 500 };
+static PROGMEM const unsigned short REPEAT_DELAY[] = { 150 };
 
 class PortWriteMenu {
 public:

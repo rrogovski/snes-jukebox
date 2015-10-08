@@ -8,7 +8,7 @@
 
 #define SPC_UPLOAD_BUFFER_SIZE 512
 
-static PROGMEM prog_uchar bootloaderCode[] = {
+static PROGMEM const unsigned char bootloaderCode[] = {
                                                 0x8F, 0x00, 0x00, // mov ($00), #[info.getExtraData(4)]
                                                 0x8F, 0x00, 0x01, // mov ($01), #[info.getExtraData(5)]
                                                 0x8F, 0xFF, 0xFC, // mov ($fc), #[info.getExtraData(6)]
@@ -50,7 +50,7 @@ static PROGMEM prog_uchar bootloaderCode[] = {
                                              
 #define BOOTLOADER_LENGTH 83
 
-static PROGMEM prog_uchar DSPdata[] = {
+static PROGMEM const unsigned char DSPdata[] = {
   0xC4, 0xF2,       // mov ($f2), A
   0x64, 0xF4,       // cmp a, ($f4)
   0xD0, 0xFC,       // bne -4
@@ -68,7 +68,7 @@ static PROGMEM prog_uchar DSPdata[] = {
 #define BRR_TRANSFER_BLOCK_COUNT 70
 #define BRR_TRANSFER_BLOCK_SIZE BRR_TRANSFER_BLOCK_COUNT * 9
 
-static PROGMEM prog_uint8_t songLoaderData[] = {
+static PROGMEM const unsigned char songLoaderData[] = {
   0x8F, 0x0C, 0xF2, 0x8F, 0x7F, 0xF3, 0x8F, 0x1C, 0xF2, 0x8F, 0x7F, 0xF3, 0x8F, 0x2C, 0xF2, 0x8F,
   0x00, 0xF3, 0x8F, 0x3C, 0xF2, 0x8F, 0x00, 0xF3, 0x8F, 0x2D, 0xF2, 0x8F, 0x00, 0xF3, 0x8F, 0x3D,
   0xF2, 0x8F, 0x00, 0xF3, 0x8F, 0x5D, 0xF2, 0x8F, 0x05, 0xF3, 0x8F, 0x00, 0xF2, 0x8F, 0x7F, 0xF3,

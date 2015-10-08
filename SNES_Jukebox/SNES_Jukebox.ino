@@ -71,7 +71,7 @@ void setup()
   endLcdWrite();
 }
 
-void startapuwrite(uint16_t address, prog_uchar *data, int len)
+void startapuwrite(uint16_t address, const unsigned char *data, int len)
 {
   resetApu();
 
@@ -334,7 +334,7 @@ bool isBrrFile(File &f) {
 }
 
 void drawMenuItem(int i, const char *filename, bool isDirectory) {
-  prog_uint16_t *icon = NULL;
+  const unsigned short *icon = NULL;
   if (isDirectory) {
     icon = folderIcon;
   } else if (isSpcFile(filename)) {

@@ -42,7 +42,7 @@ void uploadBrrSongLoader(Adafruit_ST7735 &lcd) {
   drawText(lcd, "Upoading loader...", 0, 0);
   endLcdWrite();
   
-  prog_uint8_t *loaderData = songLoaderData;
+  const unsigned char *loaderData = songLoaderData;
   resetApu();
   beginApuBlockWrite(0x200);
   for (int i = 0; i < SONG_LOADER_DATA_LENGTH; i++) {

@@ -90,8 +90,8 @@ void drawBinaryByte(Adafruit_ST7735 &lcd, byte data, int x, int y) {
   drawText(lcd, text, x, y);
 }
 
-void drawIcon(Adafruit_ST7735 &lcd, prog_uint16_t *data, int xOffset, int yOffset) {
-  prog_uint16_t *currentData = data;
+void drawIcon(Adafruit_ST7735 &lcd, const unsigned short *data, int xOffset, int yOffset) {
+  const unsigned short *currentData = data;
   word width = pgm_read_word(currentData++);
   word height = pgm_read_word(currentData++);
   
